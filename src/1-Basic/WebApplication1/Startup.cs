@@ -5,8 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-using ReflectInsight.Extensions.Logging;
-
 namespace WebApplication.Basic
 {
     public class Startup
@@ -35,8 +33,6 @@ namespace WebApplication.Basic
             {
                 app.UseHsts();
             }
-
-            loggerFactory.AddReflectInsight("ReflectInsight.config");
 
             app.UseHttpsRedirection();
             app.UseMvc();
